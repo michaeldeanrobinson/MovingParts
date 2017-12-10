@@ -29,6 +29,7 @@ namespace MP.Web.Api
             // These filters will fire in this order. Do not change the order.
             ISecurityManager securityManager = AutofacIoC.Resolve<ISecurityManager>();
             config.Filters.Add(new AuthenticationTokenRequiredActionFilterAttribute(securityManager));
+            config.Filters.Add(new DocumentInitializationActionFilterAttribute());
             config.Filters.Add(new LoggingActionFilterAttribute());
             config.Filters.Add(new SafeMethodActionFilterAttribute());
 

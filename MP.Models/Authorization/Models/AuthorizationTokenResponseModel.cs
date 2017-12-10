@@ -8,26 +8,23 @@ namespace MP.Models.Authorization.Models
     [DataContract(Namespace = "")]
     public class AuthorizationTokenResponseModel : IResponseModel
     {
-        [DataMember(Order = 0)] // Label ProcessTag as DocumentId in xml output to support Lee County
-        public Guid ProcessTag { get; set; }
-
         public Guid UserId { get; set; }
         public ModelTypes ModelType { get { return ModelTypes.AuthorizationToken; } }
 
-        [DataMember(Order = 1)]
+        [DataMember(Order = 0)]
         public bool Success
         {
             get { return Error == null; }
             set { /* This property is readonly. Empty braces are needed for Protobuffer support */ }
         }
 
-        [DataMember(Order = 2, EmitDefaultValue = false)]
+        [DataMember(Order = 1, EmitDefaultValue = false)]
         public Error Error { get; set; }
 
-        [DataMember(Order = 3)]
+        [DataMember(Order = 2)]
         public string AuthenticationToken { get; set; }
 
-        [DataMember(Order = 4)]
+        [DataMember(Order = 3)]
         public DateTime Expiration { get; set; }
     }
 }

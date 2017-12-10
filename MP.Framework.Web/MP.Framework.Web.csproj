@@ -70,6 +70,7 @@
     <Compile Include="Extensions\HttpRequestMessageExtensions.cs" />
     <Compile Include="Factory.cs" />
     <Compile Include="Filters\Action\AuthenticationTokenRequiredActionFilterAttribute.cs" />
+    <Compile Include="Filters\Action\DocumentInitializationActionFilterAttribute.cs" />
     <Compile Include="Filters\Action\LoggingActionFilterAttribute.cs" />
     <Compile Include="Filters\Action\SafeMethodActionFilterAttribute.cs" />
     <Compile Include="Filters\Authorization\RequireHttpsAuthorizationFilterAttribute.cs" />

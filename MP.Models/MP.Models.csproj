@@ -62,6 +62,7 @@
     <Compile Include="Authorization\Models\AuthorizationTokenResponseModel.cs" />
     <Compile Include="Authorization\Validators\TokenRequestAuthorizationRequestModelValidator.cs" />
     <Compile Include="Enums\ModelTypes.cs" />
+    <Compile Include="Helpers\DocumentHelper.cs" />
     <Compile Include="IRequestModel.cs" />
     <Compile Include="IResponseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

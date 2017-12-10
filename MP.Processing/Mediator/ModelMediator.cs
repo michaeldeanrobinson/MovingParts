@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using MP.Models;
 
 namespace MP.Framework.Services.Mediator
@@ -10,9 +9,11 @@ namespace MP.Framework.Services.Mediator
             where TRequestModel : IRequestModel
             where TResponseModel : IResponseModel
         {
-            // TODO: Use MessageHandlerRepository to get MessageHandler based on model type
+            // TODO: Add security calls here to verify if the creds in the AuthToken should be allowed to make this call
 
-            throw new NotImplementedException();
+            Task<TResponseModel> task = Task.Factory.StartNew(() => (TResponseModel)ServiceContext.MessageHandlerRepository[requestModel.ModelType].Handle(requestModel));
+
+            return task;
         }
     }
 }

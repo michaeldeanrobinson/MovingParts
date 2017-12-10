@@ -29,11 +29,9 @@ namespace MP.Web.Api.Controllers
                 return ResultHandler.CreateResultError<TResponseModel>("Request failed to process.", 400, ErrorLevel.Data, ErrorType.Fatal);
             }
 
-            IRequestModel componentRequestModel = requestModel as IRequestModel;
-
             return new Result<TResponseModel>
             {
-                ProcessTag = componentRequestModel.ProcessTag,
+                ProcessTag = requestModel.ProcessTag,
                 Value = responseModel,
             };
         }

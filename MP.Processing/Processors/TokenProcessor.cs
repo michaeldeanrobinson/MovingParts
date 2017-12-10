@@ -7,6 +7,7 @@ using MP.Models;
 using MP.Models.Authorization.Models;
 using MP.Models.Rest;
 using MP.Models.Security;
+using MP.Services.Entities;
 
 namespace MP.Framework.Services.Processors
 {
@@ -24,15 +25,13 @@ namespace MP.Framework.Services.Processors
                 return GenerateAuthTokenResponse(model, _debugUserId);
             }
 
-            // Map model to data object
-
             // Look up username and password in database
-            //UserExternalModel userModelResponse = Factory.UserService.FindByUsernameAndPassword(model.Username, model.Password);
+            UserEntity userEntityResponse = Factory.UserService.FindByUsernameAndPassword(model.Username, model.Password);
 
-            //if (userModelResponse != null && userModelResponse.UserId != Guid.Empty)
-            //{
-            //    return GenerateAuthTokenResponse(model, userModelResponse.UserId);
-            //}
+            if (userEntityResponse != null && userEntityResponse.UserId != Guid.Empty)
+            {
+                return GenerateAuthTokenResponse(model, userEntityResponse.UserId);
+            }
 
             return CreateErrorResponse(new Exception("Invalid login request, please use a valid username and password and try again."));
 

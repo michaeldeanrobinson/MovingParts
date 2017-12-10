@@ -41,17 +41,17 @@ namespace MP.Web.Api.Controllers
             }
 
             // process the request
-            AuthorizationTokenResponseModel responseModel = await ProcessRequest<AuthorizationTokenRequestModel, AuthorizationTokenResponseModel>(requestModel);
+            Result<AuthorizationTokenResponseModel> responseModel = await ProcessRequest<AuthorizationTokenRequestModel, AuthorizationTokenResponseModel>(requestModel);
 
             // validate response
-            if (String.IsNullOrWhiteSpace(responseModel?.AuthenticationToken))
+            if (String.IsNullOrWhiteSpace(responseModel?.Value?.AuthenticationToken))
             {
                 return ResultHandler.CreateResultError<AuthorizationTokenResponseModel>("Invalid login request, please use a valid username and password and try again.", 400, ErrorLevel.Data, ErrorType.Fatal);
             }
 
             Factory.LogManager.Logger.Exit($"AuthorizationController.Token");
 
-            return new Result<AuthorizationTokenResponseModel> { Value = responseModel };
+            return responseModel;
         }
     }
 }
