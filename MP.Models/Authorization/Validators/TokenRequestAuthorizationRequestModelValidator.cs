@@ -3,7 +3,7 @@ using MP.Models.Authorization.Models;
 
 namespace MP.Models.Authorization.Validators
 {
-    public class TokenRequestAuthorizationRequestModelValidator : AbstractValidator<TokenRequestAuthorizationRequestModel>
+    public class TokenRequestAuthorizationRequestModelValidator : AbstractValidator<AuthorizationTokenRequestModel>
     {
         public TokenRequestAuthorizationRequestModelValidator()
         {

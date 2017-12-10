@@ -10,7 +10,7 @@ namespace MP.Framework.Services
 {
     public static class ServiceContext
     {
-        private static readonly ModelTypes _modelTypes = ModelTypes.Authorization;
+        private static readonly ModelTypes _modelTypes = ModelTypes.AuthorizationToken;
 
         static ServiceContext()
         {

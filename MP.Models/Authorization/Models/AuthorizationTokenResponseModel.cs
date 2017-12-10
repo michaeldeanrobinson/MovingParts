@@ -6,13 +6,13 @@ using MP.Models.Rest;
 namespace MP.Models.Authorization.Models
 {
     [DataContract(Namespace = "")]
-    public class TokenRequestAuthorizationResponseModel : IResponseModel
+    public class AuthorizationTokenResponseModel : IResponseModel
     {
         [DataMember(Order = 0)] // Label ProcessTag as DocumentId in xml output to support Lee County
         public Guid ProcessTag { get; set; }
 
         public Guid UserId { get; set; }
-        public ModelTypes ModelType { get { return ModelTypes.Authorization; } }
+        public ModelTypes ModelType { get { return ModelTypes.AuthorizationToken; } }
 
         [DataMember(Order = 1)]
         public bool Success

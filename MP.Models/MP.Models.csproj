@@ -58,8 +58,8 @@
     <Compile Include="..\_Shared\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Authorization\Models\TokenRequestAuthorizationRequestModel.cs" />
-    <Compile Include="Authorization\Models\TokenRequestAuthorizationResponseModel.cs" />
+    <Compile Include="Authorization\Models\AuthorizationTokenRequestModel.cs" />
+    <Compile Include="Authorization\Models\AuthorizationTokenResponseModel.cs" />
     <Compile Include="Authorization\Validators\TokenRequestAuthorizationRequestModelValidator.cs" />
     <Compile Include="Enums\ModelTypes.cs" />
     <Compile Include="IRequestModel.cs" />

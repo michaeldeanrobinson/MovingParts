@@ -7,13 +7,13 @@ using MP.Models.Enums;
 
 namespace MP.Models.Authorization.Models
 {
-    [DataContract(Namespace = "", Name = "TokenRequest")]
+    [DataContract(Namespace = "", Name = "Token")]
     [Validator(typeof(TokenRequestAuthorizationRequestModelValidator))]
-    public class TokenRequestAuthorizationRequestModel : IRequestModel
+    public class AuthorizationTokenRequestModel : IRequestModel
     {
         public Guid ProcessTag { get; set; }
         public Guid UserId { get; set; }
-        public ModelTypes ModelType {  get { return ModelTypes.Authorization; } }
+        public ModelTypes ModelType {  get { return ModelTypes.AuthorizationToken; } }
 
         [DataMember(Order = 0)]
         [Required]

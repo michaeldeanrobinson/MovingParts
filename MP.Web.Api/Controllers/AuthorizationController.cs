@@ -23,11 +23,11 @@ namespace MP.Web.Api.Controllers
         /// By default the token will expire in 24 hours
         /// </remarks>
         [HttpPost]
-        [Route("tokenrequest")]
+        [Route("token")]
         [AllowAnonymous]
-        public async Task<Result<TokenRequestAuthorizationResponseModel>> LoginRequest([FromBody]TokenRequestAuthorizationRequestModel requestModel)
+        public async Task<Result<AuthorizationTokenResponseModel>> Token([FromBody]AuthorizationTokenRequestModel requestModel)
         {
-            Factory.LogManager.Logger.Entry($"AuthorizationController.LoginRequest");
+            Factory.LogManager.Logger.Entry($"AuthorizationController.Token");
 
             requestModel.UserAgent = Request.GetUserAgent();
 
@@ -41,17 +41,17 @@ namespace MP.Web.Api.Controllers
             }
 
             // process the request
-            TokenRequestAuthorizationResponseModel responseModel = await ProcessRequest<TokenRequestAuthorizationRequestModel, TokenRequestAuthorizationResponseModel>(requestModel);
+            AuthorizationTokenResponseModel responseModel = await ProcessRequest<AuthorizationTokenRequestModel, AuthorizationTokenResponseModel>(requestModel);
 
             // validate response
             if (String.IsNullOrWhiteSpace(responseModel?.AuthenticationToken))
             {
-                return ResultHandler.CreateResultError<TokenRequestAuthorizationResponseModel>("Invalid login request, please use a valid username and password and try again.", 400, ErrorLevel.Data, ErrorType.Fatal);
+                return ResultHandler.CreateResultError<AuthorizationTokenResponseModel>("Invalid login request, please use a valid username and password and try again.", 400, ErrorLevel.Data, ErrorType.Fatal);
             }
 
-            Factory.LogManager.Logger.Exit($"AuthorizationController.LoginRequest");
+            Factory.LogManager.Logger.Exit($"AuthorizationController.Token");
 
-            return new Result<TokenRequestAuthorizationResponseModel> { Value = responseModel };
+            return new Result<AuthorizationTokenResponseModel> { Value = responseModel };
         }
     }
 }

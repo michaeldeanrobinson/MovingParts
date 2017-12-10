@@ -6,6 +6,6 @@ namespace MP.Models.Enums
     public enum ModelTypes
     {
         None = 0,
-        Authorization = 1,
+        AuthorizationToken = 1,
     }
 }
