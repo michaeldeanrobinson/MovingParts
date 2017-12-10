@@ -1,5 +1,7 @@
-﻿using MP.Framework.Logging;
+﻿using AutoMapper;
+using MP.Framework.Logging;
 using MP.Framework.Services.Processors;
+using MP.Processing.AutoMapper;
 using MP.Services;
 
 namespace MP.Framework.Services
@@ -9,6 +11,7 @@ namespace MP.Framework.Services
         static Factory()
         {
             LogManager = LogManagerRepository.GetLogManager(Settings.LogManager);
+            Mapper = AutoMapperConfiguration.Configure().CreateMapper();
 
             // Processors
             TokenProcessor = new TokenProcessor();
@@ -18,6 +21,7 @@ namespace MP.Framework.Services
         }
 
         public static ILogManager LogManager { get; }
+        public static IMapper Mapper { get; internal set; }
 
         public static IProcessor TokenProcessor { get; }
         public static UserService UserService { get; }

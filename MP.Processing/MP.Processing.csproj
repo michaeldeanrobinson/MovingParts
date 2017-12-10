@@ -30,9 +30,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +48,8 @@
     <Compile Include="..\_Shared\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="AutoMapper\AutoMapperConfiguration.cs" />
+    <Compile Include="AutoMapper\DefaultProfile.cs" />
     <Compile Include="Decorators\LoggingMessageHandlerDecorator.cs" />
     <Compile Include="Decorators\MessageHandlerDecorator.cs" />
     <Compile Include="Factory.cs" />
