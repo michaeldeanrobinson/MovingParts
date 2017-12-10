@@ -49,6 +49,7 @@
     <Compile Include="Mediator\ModelMediator.cs" />
     <Compile Include="Attributes\MessageHandlerRegistrationAttribute.cs" />
     <Compile Include="MessageHandlers\IMessageHandler.cs" />
+    <Compile Include="MessageHandlers\IMessageHandlerRepository.cs" />
     <Compile Include="MessageHandlers\MessageHandlerRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceContext.cs" />

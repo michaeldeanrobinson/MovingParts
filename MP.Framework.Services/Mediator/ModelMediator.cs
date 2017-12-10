@@ -10,6 +10,8 @@ namespace MP.Framework.Services.Mediator
             where TRequestModel : IRequestModel
             where TResponseModel : IResponseModel
         {
+            // TODO: Use MessageHandlerRepository to get MessageHandler based on model type
+
             throw new NotImplementedException();
         }
     }

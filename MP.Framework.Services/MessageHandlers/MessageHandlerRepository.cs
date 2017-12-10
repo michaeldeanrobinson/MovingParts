@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MP.Framework.Services.MessageHandlers
 {
-    class MessageHandlerRepository
+    public class MessageHandlerRepository : IMessageHandlerRepository
     {
     }
 }

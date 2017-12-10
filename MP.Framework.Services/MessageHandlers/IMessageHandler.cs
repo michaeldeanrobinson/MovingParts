@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MP.Models;
 
 namespace MP.Framework.Services.MessageHandlers
 {
     public interface IMessageHandler
     {
+        IResponseModel Handle(IRequestModel requestModel);
     }
 }
