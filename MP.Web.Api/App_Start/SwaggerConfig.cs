@@ -14,6 +14,7 @@ namespace MP.Web.Api
 {
     internal static class SwaggerConfig
     {
+#pragma warning disable S125
         public static void Register()
         {
             var thisAssembly = typeof(SwaggerConfig).Assembly;
@@ -267,7 +268,7 @@ namespace MP.Web.Api
                         c.EnableApiKeySupport("Authorization", "header");
                     });
         }
-
+#pragma warning restore S125
         private static string GetDescription()
         {
             StringBuilder sb = new StringBuilder();

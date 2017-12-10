@@ -66,16 +66,13 @@ namespace MP.Framework.Web.Filters.Action
 
             if (typeof(Result).IsAssignableFrom(actionExecutedContext.ActionContext.ActionDescriptor.ReturnType))
             {
-                if (actionExecutedContext.Response.Content is ObjectContent content)
+                if (actionExecutedContext.Response.Content is ObjectContent content && content.Value is Result result)
                 {
-                    if (content.Value is Result result)
-                    {
-                        result.ExecutionTime = DateTime.Now.Subtract(start);
+                    result.ExecutionTime = DateTime.Now.Subtract(start);
 
-                        if (result.Error?.Code.Number > 0)
-                        {
-                            actionExecutedContext.Response.StatusCode = (HttpStatusCode)result.Error.Code.Number;
-                        }
+                    if (result.Error?.Code.Number > 0)
+                    {
+                        actionExecutedContext.Response.StatusCode = (HttpStatusCode)result.Error.Code.Number;
                     }
                 }
             }

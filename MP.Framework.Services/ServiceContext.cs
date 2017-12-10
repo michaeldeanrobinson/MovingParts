@@ -1,4 +1,8 @@
-﻿using MP.Framework.Services.Mediator;
+﻿using System;
+using System.Collections.Generic;
+using MP.Framework.Reflection;
+using MP.Framework.Services.Mediator;
+using MP.Framework.Services.MessageHandlers;
 using MP.Models;
 using MP.Models.Enums;
 
@@ -10,10 +14,14 @@ namespace MP.Framework.Services
 
         static ServiceContext()
         {
+            List<Type> types = AssemblyUtilities.GetTypes("MP.*.dll", "MP.");
+
+            MessageHandlerRepository = new MessageHandlerRepository(types);
             ModelMediator = new ModelMediator();
         }
 
         public static IModelMediator ModelMediator { get; }
+        public static IMessageHandlerRepository MessageHandlerRepository { get; }
 
         public static bool ShouldBeLogged(IRequestModel requestModel)
         {
