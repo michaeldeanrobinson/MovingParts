@@ -117,6 +117,7 @@
   <ItemGroup>
     <Content Include="css\style.css" />
     <Content Include="default.htm" />
+    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <EmbeddedResource Include="SwaggerExtensions\index.html" />
     <EmbeddedResource Include="SwaggerExtensions\style.css" />
