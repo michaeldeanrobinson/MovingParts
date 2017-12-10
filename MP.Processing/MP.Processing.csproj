@@ -7,8 +7,8 @@
     <ProjectGuid>{5F012A62-9FD0-4E15-A519-91C5E362032B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MP.Framework.Services</RootNamespace>
-    <AssemblyName>MP.Framework.Services</AssemblyName>
+    <RootNamespace>MP.Processing</RootNamespace>
+    <AssemblyName>MP.Processing</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

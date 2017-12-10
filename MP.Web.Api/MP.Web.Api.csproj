@@ -150,9 +150,9 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MP.Framework.Services\MP.Framework.Services.csproj">
+    <ProjectReference Include="..\MP.Processing\MP.Processing.csproj">
       <Project>{5F012A62-9FD0-4E15-A519-91C5E362032B}</Project>
-      <Name>MP.Framework.Services</Name>
+      <Name>MP.Processing</Name>
     </ProjectReference>
     <ProjectReference Include="..\MP.Framework.Web\MP.Framework.Web.csproj">
       <Project>{d55419a7-e2f3-4535-8ad7-bcd06e43d7de}</Project>
