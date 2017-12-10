@@ -1,0 +1,278 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'Droid Sans', sans-serif;
+}
+
+.clientLibraryTable {
+    margin: 10px;
+}
+
+    .clientLibraryTable th {
+        border-bottom: 1px solid #cccccc;
+    }
+
+.swagger-section .swagger-ui-wrap table.clientLibraryTable tbody tr td {
+    border-bottom: 0;
+}
+
+.page-container {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    margin-top: 86px;
+}
+
+.page-header {
+    width: 100%;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    height: 86px;
+    min-height: 86px;
+    filter: none;
+    background-image: none;
+    z-index: 9995;
+    background-color: #2b3643;
+    position: fixed;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.page-logo {
+    float: left;
+    display: block;
+    width: 150px;
+    height: 46px;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+.logo-default {
+    margin: 16px 0 0 0;
+}
+
+.top-menu {
+    margin: 0;
+    padding: 0;
+    height: 80px;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 6px;
+    white-space: nowrap;
+    width: 99%;
+    min-width: 40%;
+}
+
+.form-control {
+    outline: 0 !important;
+    box-shadow: none !important;
+    height: 20px;
+    padding: 6px 12px;
+    background-color: #fff;
+    border: 1px solid #c2cad8;
+    font-size: 12px;
+    line-height: 1.42857;
+    color: #555;
+    background-image: none;
+}
+
+.credential {
+    width: 150px !important;
+}
+
+.auth-token {
+    width: 423px !important;
+    margin-top: 6px;
+}
+
+.page-content {
+    font-size: 16px;
+    padding-left: 6px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.top-menuLink {
+    font: 14px Arial;
+    color: white;
+}
+
+.versionSelect {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    .btn:focus,
+    .btn.focus,
+    .btn:active:focus,
+    .btn:active.focus,
+    .btn.active:focus,
+    .btn.active.focus {
+        outline: thin dotted;
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px;
+    }
+
+    .btn:hover,
+    .btn:focus,
+    .btn.focus {
+        color: #333;
+        text-decoration: none;
+    }
+
+    .btn:active,
+    .btn.active {
+        outline: 0;
+        background-image: none;
+        -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    }
+
+    .btn.disabled,
+    .btn[disabled],
+    fieldset[disabled] .btn {
+        cursor: not-allowed;
+        opacity: 0.65;
+        filter: alpha(opacity=65);
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .btn.green:not(.btn-outline) {
+        color: #FFFFFF;
+        background-color: #32c5d2;
+        border-color: #32c5d2;
+    }
+
+        .btn.green:not(.btn-outline):focus,
+        .btn.green:not(.btn-outline).focus {
+            color: #FFFFFF;
+            background-color: #26a1ab;
+            border-color: #26a1ab;
+        }
+
+        .btn.green:not(.btn-outline):hover {
+            color: #FFFFFF;
+            background-color: #26a1ab;
+            border-color: #26a1ab;
+        }
+
+        .btn.green:not(.btn-outline):active,
+        .btn.green:not(.btn-outline).active,
+        .open > .btn.green:not(.btn-outline).dropdown-toggle {
+            color: #FFFFFF;
+            background-color: #26a1ab;
+            border-color: #26a1ab;
+        }
+
+            .btn.green:not(.btn-outline):active:hover,
+            .btn.green:not(.btn-outline):active:focus,
+            .btn.green:not(.btn-outline):active.focus,
+            .btn.green:not(.btn-outline).active:hover,
+            .btn.green:not(.btn-outline).active:focus,
+            .btn.green:not(.btn-outline).active.focus,
+            .open > .btn.green:not(.btn-outline).dropdown-toggle:hover,
+            .open > .btn.green:not(.btn-outline).dropdown-toggle:focus,
+            .open > .btn.green:not(.btn-outline).dropdown-toggle.focus {
+                color: #FFFFFF;
+                background-color: #23959f;
+                border-color: #23959f;
+            }
+
+        .btn.green:not(.btn-outline):active,
+        .btn.green:not(.btn-outline).active,
+        .open > .btn.green:not(.btn-outline).dropdown-toggle {
+            background-image: none;
+        }
+
+        .btn.green:not(.btn-outline).disabled,
+        .btn.green:not(.btn-outline).disabled:hover,
+        .btn.green:not(.btn-outline).disabled:focus,
+        .btn.green:not(.btn-outline).disabled.focus,
+        .btn.green:not(.btn-outline).disabled:active,
+        .btn.green:not(.btn-outline).disabled.active,
+        .btn.green:not(.btn-outline)[disabled],
+        .btn.green:not(.btn-outline)[disabled]:hover,
+        .btn.green:not(.btn-outline)[disabled]:focus,
+        .btn.green:not(.btn-outline)[disabled].focus,
+        .btn.green:not(.btn-outline)[disabled]:active,
+        .btn.green:not(.btn-outline)[disabled].active,
+        fieldset[disabled] .btn.green:not(.btn-outline),
+        fieldset[disabled] .btn.green:not(.btn-outline):hover,
+        fieldset[disabled] .btn.green:not(.btn-outline):focus,
+        fieldset[disabled] .btn.green:not(.btn-outline).focus,
+        fieldset[disabled] .btn.green:not(.btn-outline):active,
+        fieldset[disabled] .btn.green:not(.btn-outline).active {
+            background-color: #32c5d2;
+            border-color: #32c5d2;
+        }
+
+        .btn.green:not(.btn-outline) .badge {
+            color: #32c5d2;
+            background-color: #FFFFFF;
+        }
+
+.flex-container {
+    display: flex;
+}
+
+.flex-spacer {
+    flex: 1;
+}
+
+.swagger-selection-div {
+    display: inline-block;
+}
+
+.user-input-div {
+    display: inline-block;
+}
+
+.warning {
+    color: red;
+}
