@@ -8,6 +8,7 @@ This project demonstrates the basics for a WebApi2 application.
 * Repository
 * Factory
 * Decorator
+* Swagger
 * AutoMapper
 * FluentValidation
 * Compression (including Brotli)
