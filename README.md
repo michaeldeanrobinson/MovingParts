@@ -20,7 +20,4 @@ This project demonstrates the basics for a WebApi2 application.
 * Build
 * Run
 * Play around with Swagger
-* Hardcoded username and password:
-** admin
-** admin
-
+* Hardcoded username and password: admin/admin
